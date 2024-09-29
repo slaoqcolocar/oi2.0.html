@@ -1,0 +1,106 @@
+Skip to Play Sketch
+Cookies
+The p5.js Editor uses cookies. Some are essential to the website functionality and allow you to manage an account and preferences. Others are not essential—they are used for analytics and allow us to learn more about our community. We never sell this data or use it for advertising. You can decide which cookies you would like to allow, and learn more in our Privacy Policy.
+
+
+Allow All
+
+Allow Essential
+Arquivo
+Editar
+Esboço
+Ajuda
+Português
+Olá, AnaBSIvone!
+
+
+
+Auto-atualizar
+
+Far fifth
+por AnaBSIvone
+
+
+
+sketch.js
+Salvo: agora
+1
+let campoIdade;
+2
+let campoFantasia;
+3
+let campoAventura;
+4
+​
+5
+function setup() {
+6
+  createCanvas(800, 400);
+7
+  createElement("h2", "Recomendador de filmes");
+8
+  createSpan("Sua idade:");
+9
+  campoIdade = createInput("5");
+10
+  campoFantasia = createCheckbox("Gosta de fantasia?");
+11
+  campoAventura = createCheckbox("Gosta de aventura?");
+12
+}
+13
+​
+14
+function draw() {
+15
+  background("white");
+16
+  let idade = campoIdade.value();
+17
+  let gostaDeFantasia = campoFantasia.checked();
+18
+  let gostaDeAventura = campoAventura.checked();
+19
+  let recomendacao = geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura);
+20
+​
+21
+  fill(color(255, 105, 75));
+22
+  textAlign(CENTER, CENTER);
+23
+  textSize(38);
+24
+  text(recomendacao, width / 2, height / 2);
+25
+}
+26
+​
+27
+function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
+28
+  if (idade >= 10) {
+29
+    if (idade >= 14) {
+30
+      return "A viagem de Chiriro";
+31
+    } else {
+32
+      if (idade >= 12) {
+33
+        if(gostaDeFantasia || gostaDeAventura) {
+34
+          return "Nausicaa do Vale do Vento ";          
+35
+        } else{
+36
+         return "O reino dos gatos";
+Não há mensagens de Lint
+Linha atuallinha 1
+
+Terminal
+Limpar
+
+​
+Prévia
